@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: consoleapp1
-          image: https://hub.docker.com/repositories/fde1234/consoleapp1:latest
+          image: fde1234/consoleapp1:latest
           imagePullPolicy: IfNotPresent
           resources:
             requests:
