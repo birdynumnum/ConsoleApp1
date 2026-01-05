@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consoleapp1
+  labels:
+    app: consoleapp1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: consoleapp1
+  template:
+    metadata:
+      labels:
+        app: consoleapp1
+    spec:
+      containers:
+        - name: consoleapp1
+          image: fde1234/consoleapp1:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "250m"
+              memory: "128Mi"
